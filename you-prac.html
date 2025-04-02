@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        p {
+            font-family: Roboto, Arial;
+            margin: 0px;
+        }
+
+        .search-bar {
+            display: block;
+        }
+
+        .video-preview {
+            width: 300px;
+        }
+
+        .thumbnail {
+            max-width: 100%;
+        }
+
+        .channel-picture {
+            vertical-align: top;
+            display: inline-block;
+            width: 45px;
+        }
+
+        .video-title {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 16px;
+        }
+
+        .video-info {
+            vertical-align: top;
+            display: inline-block;
+            width: 245px;
+        }
+
+        .profile-picture {
+            border-radius: 23px;
+            width: 100%;
+        }
+        .video-author, .video-stats{
+            font-size: 12px;
+            color: #606060;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="search-bar" type="text" placeholder="Search">
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        </div>
+        <div class="video-detail">
+            <div class="channel-picture">
+                <img class="profile-picture" src="profile/channel-1.jpeg">
+            </div>
+            <div class="video-info">
+                <p class="video-title">
+                    Talking Tech and AI with Google CEO Sundar Pichai!
+                </p>
+                <p class="video-author">
+                    Marques Brownlee
+                </p>
+                <p class="video-stats">
+                    3.4M views &#183; 6 months ago
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
