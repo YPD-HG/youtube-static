@@ -1,0 +1,42 @@
+.sidebar {
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* gap: 10px; Adjust spacing as needed */
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+}
+
+.sidebar button {
+    background-color: #fff;
+    height: 80px;
+    width: 72px;
+    border: none;
+}
+
+.sidebar button img {
+    height: 25px;
+    width: 25px;
+}
+
+.sidebar span {
+    font-size: 10px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.library {
+    display: flex;
+    flex-direction: column;
+}
+
+.youtube-text {
+    font-size: 10px;
+}

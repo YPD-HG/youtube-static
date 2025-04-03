@@ -10,68 +10,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <style>
-        p {
-            font-family: Roboto, Arial;
-            margin: 0px;
-        }
-
-        .search-bar {
-            display: block;
-        }
-
-        .video-preview {
-        }
-
-        .thumbnail {
-            width: 100%;
-        }
-
-        .video-info-grid {
-            display: grid;
-            grid-template-columns: 50px 1fr;
-        }
-
-        .channel-picture {
-            margin-right: 10px;
-        }
-
-        .video-title {
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-
-        .video-info {
-            vertical-align: top;
-        }
-
-        .profile-picture {
-            width: 100%;
-        }
-
-        .video-author,
-        .video-stats {
-            font-size: 12px;
-            color: #606060;
-        }
-
-        .video-detail {
-            background-color: gray;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            column-gap: 16px;
-            row-gap: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
 </head>
 
 <body>
-    <input class="search-bar" type="text" placeholder="Search">
+    <div class="sidebar">
+        <button>
+            <span class="home">
+                <span>
+                    <img src="icons/home.svg" alt="">
+                </span>
+                <span>
+                    Home
+                </span>
+            </span>
+        </button>
+        <button>
+            <span class="explore">
+                <span>
+                    <img src="icons/explore.svg" alt="">
+                </span>
+                <span>
+                    Explore
+                </span>
+            </span>
+        </button>
+        <button>
+            <span class="subscriptions">
+                <span>
+                    <img src="icons/subscriptions.svg" alt="">
+                </span>
+                <span>
+                    Subscriptions
+                </span>
+            </span>
+        </button>
+        <button>
+            <span class="originals">
+                <span>
+                    <img src="icons/originals.svg" alt="">
+                </span>
+                <span>
+                    Originals
+                </span>
+            </span>
+        </button>
+        <button>
+            <span class="youtube-music">
+                <span>
+                    <img src="icons/youtube-music.svg" alt="">
+                </span>
+                <span class="youtube-text">
+                    YouTube Music
+                </span>
+            </span>
+        </button>
+        <button>
+            <span class="library">
+                <span>
+                    <img src="icons/library.svg" alt="">
+                </span>
+                <span>
+                    Library
+                </span>
+            </span>
+        </button>
+    </div>
+    <div class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="">
+            <img class="youtube-logo" src="icons/youtube-logo.svg" alt="">
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="icons/search.svg" alt="">
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="">
+            </button>
+        </div>
+        <div class="right-section">
+            <button class="upload-button">
+                <img class="upload-icon" src="icons/upload.svg" alt="">
+            </button>
+            <button class="youtube-apps-button">
+                <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="">
+            </button>
+            <button class="notifications-button">
+                <img class="notifications-icon" src="icons/notifications.svg" alt="">
+            </button>
+            <img class="current-user-picture" src="channel-pictures/channel-1.jpeg" alt="">
+        </div>
+    </div>
     <div class="video-grid">
         <div class="video-preview">
             <div class="thumbnail-row">
@@ -79,7 +113,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -100,7 +134,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -121,7 +155,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -142,7 +176,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -163,7 +197,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -184,7 +218,7 @@
             </div>
             <div class="video-info-grid">
                 <div class="channel-picture">
-                    <img class="profile-picture" src="profile/channel-1.jpeg">
+                    <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
                 </div>
                 <div class="video-info">
                     <p class="video-title">
@@ -204,6 +238,3 @@
 </body>
 
 </html>
-
-
-
