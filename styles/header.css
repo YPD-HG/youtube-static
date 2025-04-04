@@ -12,6 +12,11 @@
     /*Note that writing both left and right as 0
     will make sure that the content is strechted*/
 
+    z-index: 100;
+    /* this will be used when the element are something
+    other then pos:static, in that case the element
+    wich are defined after the header will apear on top
+    of the document flow, leaving the element whose pos: static*/
     background-color: #fff;
 
     /* line 8 to 11 was basically to have an navbar which is fixed and have the
@@ -58,9 +63,7 @@
     height: 36px;
     padding-left: 10px;
     font-size: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(192, 192, 192);
+    border: 1px solid rgb(192, 192, 192);
     border-radius: 2px 0px 0px 2px;
     box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.05);
     /*
@@ -68,6 +71,14 @@
     border-top-color: whitesmoke;
     border-bottom-color: gray; */
 }
+
+/*Note this:
+border: 1px solid rgb(192, 192, 192)
+<=>
+border-width: 1px;
+border-style: solid;
+border-color: rgb(192, 192, 192); 
+*/
 
 .search-bar::placeholder {
     font-family: Roboto, Arial;
@@ -77,6 +88,17 @@
     font-weight: 350;
     border-color: rgb(154, 150, 150);
     color: rgb(154, 150, 150); */
+}
+
+.search-button,
+.voice-search-button,
+.upload-button,
+.youtube-apps-button,
+.notifications-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-button {
@@ -90,9 +112,63 @@
     margin-left: -1px;
 }
 
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-button .tooltip,
+.youtube-apps-button .tooltip,
+.notifications-button .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    /* When the pointer run over tooltip
+    it does nothing */
+    white-space: nowrap;
+
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-button:hover .tooltip,
+.youtube-apps-icon:hover+.tooltip,
+.notifications-icon:hover+.tooltip {
+    opacity: 1;
+    /*Applied some actions on img for experiment
+    note that we will have to use + in that case
+    since tooltip is not child of icon but immediate
+    sibling*/
+}
+
+/* .upload-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.upload-button .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 45px;
+    padding: 7px 5px;
+    font-size: 12px;
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+.upload-button:hover .tooltip{
+    opacity: 0.8;
+} */
 .search-icon {
     height: 25px;
-    margin-top: 4px;
 }
 
 .voice-search-button {
@@ -108,7 +184,6 @@
 
 .voice-search-icon {
     height: 24px;
-    margin-top: 4px;
 }
 
 .right-section {
@@ -142,4 +217,34 @@
 .current-user-picture {
     height: 32px;
     border-radius: 16px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: -2px;
+    /*This will be positioned beyond the top
+    edge of our container */
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+
+.notifications-alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    height: 14px;
+    width: 14px;
+    background-color: red;
+    color: white;
+    border-radius: 45px;
 }
